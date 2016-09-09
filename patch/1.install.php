@@ -11,7 +11,7 @@
                 ->addField("host", "varchar(50)")
                 ->addField("key", "varchar(100)")->addIndex("key")
                 ->addField("token","varchar(100)")->addIndex("token")
-                ->addField("lastToken","int")
+                ->addField("lastTokenDate","int")
                 ->addField("user_id", "int")->addIndex("user_id")
                 ->create();
 
