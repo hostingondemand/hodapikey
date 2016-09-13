@@ -6,6 +6,7 @@
 
         function getByUserToken($token){
             $key= $this->db->select("apikey")
+                ->ignoreParent()
                 ->where("`token`='".$token."'")->fetchModel("key","data");
 
             if($key && $key->isValid()){
@@ -17,11 +18,12 @@
 
         function getByKey($key){
             return $this->db->select("apikey")
+                ->ignoreParent()
                 ->where("`key`='".$key."'")->fetchModel("key","data");
         }
 
         function save($key){
-            $this->db->saveModel($key,"apikey");
+            $this->db->saveModel($key,"apikey",true);
         }
     }
 ?>
