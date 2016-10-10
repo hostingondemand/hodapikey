@@ -1,5 +1,5 @@
 <?php namespace modules\hodapikey\patch;
-    use modules\maxpatch\lib\patch\BasePatch;
+    use modules\hodpatch\lib\patch\BasePatch;
 
     class Install extends BasePatch{
 
